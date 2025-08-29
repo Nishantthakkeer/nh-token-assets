@@ -1,0 +1,23 @@
+{
+  "name": "NH Token Index",
+  "timestamp": "2025-08-29T23:45:00+05:30",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "chainId": 137,
+  "address": "0xf930cf4150f7cb1108b30df6107818fd794398",
+  "symbol": "NH",
+  "name": "NH Token",
+  "decimals": 18,
+  "logoURI": "https://raw.githubusercontent.com/Nishant939/polygon-tokenlists/assets/0xf930cf4150f7cb1108b30df6107818fd794398/logo.png",
+  "tags": ["defi", "compliant", "polygon", "nh"],
+  "extensions": {
+    "website": "https://nhnnt.io",
+    "github": "https://github.com/Nishant939/polygon-tokenlists",
+    "audit": "https://github.com/Nishant939/polygon-tokenlists/tree/main/audits",
+    "documentation": "https://nhnnt.io/docs",
+    "compliance": "AML-ready, KYC-optional, mapped metadata"
+  }
+}
