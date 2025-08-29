@@ -15,5 +15,6 @@
       "decimals": 18,
       "logoURI": "https://ipfs.io/ipfs/bafkreiencjqgfzbbqmbahjiu24hpbm7de2z3xhkdcc6f23tsbodderjmma"
     }
-  ]
+ ],
+  "description": "NH Token is a fully compliant, audit-grade DeFi asset deployed on Polygon Mainnet. Designed for transparency and aggregator compatibility, it features automated metadata publishing, mapped logo hosting, and cryptographic commit signing. Ideal for liquidity pools, OTC strategies, and institutional-grade visibility."
 }
