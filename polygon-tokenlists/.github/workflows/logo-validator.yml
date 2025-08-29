@@ -1,0 +1,40 @@
+name: Logo Validator
+
+on:
+  pull_request:
+    paths:
+      - 'logo.png'
+
+jobs:
+  validate-logo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Verify logo format
+        run: |
+          file_type=$(file --mime-type logo.png | awk '{print $2}')
+          if [[ "$file_type" != "image/png" ]]; then
+            echo "❌ logo.png must be a PNG file."
+            exit 1
+          fi
+
+      - name: Check dimensions
+        run: |
+          dimensions=$(identify -format "%wx%h" logo.png)
+          if [[ "$dimensions" != "256x256" ]]; then
+            echo "❌ logo.png must be 256x256 pixels."
+            exit 1
+          fi
+
+      - name: Confirm filename
+        run: |
+          if [[ "$(basename logo.png)" != "logo.png" ]]; then
+            echo "❌ File must be named logo.png."
+            exit 1
+          fi
+
+      - name: Log commit signer
+        run: |
+          echo "✅ Commit signed by: $(git log -1 --pretty=format:'%cn <%ce>')"
